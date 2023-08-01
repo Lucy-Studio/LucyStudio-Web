@@ -71,6 +71,10 @@ h6 {
   font-family: var(--font-title);
 }
 
+span {
+  font-family: var(--font-title);
+}
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -2561,4 +2565,36 @@ section {
 
 .footer .credits a {
   color: #fff;
+}
+
+.alertbox1 {
+  background-color: var(--bs-red);
+  color: white;
+  padding-top: 3mm;
+  padding-bottom: 3mm;
+  font-family: "SUITE-Regular";
+}
+.alertbox1:hover {
+  cursor: pointer;
+}
+
+.alertbox2 {
+  background-color: var(--bs-blue);
+  color: white;
+  padding-top: 3mm;
+  padding-bottom: 3mm;
+  font-family: "SUITE-Regular";
+}
+.alertbox2:hover {
+  cursor: pointer;
+}
+
+.close {
+  float: right;
+  margin-right: 5mm;
+  transform: scale(2);
+}
+
+.hidden {
+  display: none;
 }

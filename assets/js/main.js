@@ -291,3 +291,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+function devAlertboxClick() {
+  window.location.href = '#';
+}
+function discordAlertBoxClick() {
+  window.location.href = '#';
+}
+
+function devCloseClick() {
+  event.stopPropagation();
+
+  var alertbox = document.querySelector('.alertbox1');
+  alertbox.classList.add('hidden');
+}
+function discordCloseClick() {
+  event.stopPropagation();
+
+  var alertbox = document.querySelector('.alertbox2');
+  alertbox.classList.add('hidden');
+}
+
+// CustomOrder Script
+function toggleOtherField() {
+  var orderType = document.getElementById("order_type").value;
+  var otherField = document.getElementById("other_field");
+
+  if (orderType === "other") {
+      otherField.style.display = "block";
+  } else {
+      otherField.style.display = "none";
+  }
+}

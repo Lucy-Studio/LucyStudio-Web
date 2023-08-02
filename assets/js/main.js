@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function devAlertboxClick() {
-  window.location.href = '#';
+  window.location.href = './s5_obt.html';
 }
 function discordAlertBoxClick() {
   window.location.href = '#';

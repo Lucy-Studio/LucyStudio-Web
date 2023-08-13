@@ -41,9 +41,13 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css" />
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/generator.css" rel="stylesheet">
 
   <!-- CSS Load(Flask) -->
   <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}"> -->
@@ -153,8 +157,8 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>시즌5 사전예약</h2>
-              <p>Lucy Network 시즌5 사전예약</p>
+              <h2>한글닉네임 생성기</h2>
+              <p>인게임에서 사용할 수 있는 그라데이션 한글닉네임 설정 명령어를 생성합니다.</p>
             </div>
           </div>
         </div>
@@ -164,31 +168,43 @@
           <ol>
             <li><a href="index.html">Home</a></li>
             <li>Lucy Network</li>
-            <li>s5_obt</li>
+            <li>krnick_generator</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Breadcrumbs -->
 
-    <section class="sample-page">
+    <section class="generator">
       <div class="container" data-aos="fade-up">
 
-        <p style="font-size: 0.5cm;">
-          아래 칸에 알맞은 정보를 입력하고 [사전예약 신청하기] 버튼을 클릭하세요.<br>
-          * 무작위 닉네임 입력을 막기 위해 클라이언트의 IP정보를 수집합니다. (보관기간: 사전예약 등록 종료시까지)
-        </p>
+        <div class="section">
+          <h2>Colors:</h2>
+          <div class="row">
+            <div id="colorpicker1"></div>
+            <div id="colorpicker2"></div>
+          </div>
+        </div>
 
-        <div class="form-group", style="display: flex;">
-          <input class="form-control" name="mcname" id="mcname" type="text" placeholder="마인크래프트 닉네임">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input class="form-control" name="discord" id="discord" type="text" placeholder="디스코드 아이디 (선택)">
+        <div class="section">
+          <h2>Input:</h2>
+          <div class="row">
+            <textarea id="inputbox" style="resize: none;" placeholder="닉네임을 여기에 입력하세요."></textarea>
+          </div>
         </div>
-        &nbsp;
-        <div class="form-group">
-          <input class="form-control" name="email" id="email" type="email" placeholder="이메일 (선택)">
+
+        <div class="section">
+          <h2>Output:</h2>
+          <div class="row">
+            <textarea id="outputbox" style="resize: none;" onclick="copyCmd()" readonly></textarea>
+          </div>
         </div>
-        <br>
-        <button type="submit" class="btn btn-block btn-primary" onclick="submitObt()">사전예약 신청하기</button>
+
+        <div class="section">
+          <h2>Preview:</h2>
+          <div class="row" style="display: flex;">
+            <h2 class="prev" id="previewtext"></h2>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -247,7 +263,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/s5_obt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+  <script defer src="assets/js/generator/nick/GradientGenerator.js"></script>
+  <script defer src="assets/js/generator/nick/GradientUtil.js"></script>
 
 </body>
 
